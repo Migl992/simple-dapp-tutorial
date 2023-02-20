@@ -7,7 +7,7 @@ const initialize = () => {
   const getAccountsResult = document.getElementById('getAccountsResult');
   const getnetwork = document.getElementById('network');
   const getchainID = document.getElementById('chainId');
-  const apikey = "xxxx"
+  const apikey = "xxx"
 
   //Created check function to see if the MetaMask extension is installed
   const isMetaMaskInstalled = () => {
@@ -91,7 +91,7 @@ const initialize = () => {
           // Create a new table row and insert data
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td>${tx.timeStamp}</td>
+            <td>${new Date(tx.timeStamp * 1000).toLocaleString()}</td>
             <td>${tx.hash}</td>
             <td>${tx.from}</td>
             <td>${tx.to}</td>
